@@ -48,9 +48,13 @@ mvn clean test
 Karate ejecutará las pruebas y generará los reportes automáticamente.
 
 ## 📊 Reporte HTML
-El reporte se crea en:
+El reporte Cucumber se crea en:
 ```
 target/cucumber-html-reports/feature-overview.html
+```
+El reporte Karate se crea en:
+```
+target/karate-reports/features.petstore.html
 ```
 Ábrelo en tu navegador para ver resultados.
 
