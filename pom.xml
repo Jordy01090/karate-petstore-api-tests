@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>qa.jordy</groupId>
+    <artifactId>petstore-karate</artifactId>
+    <version>1.0.0</version>
+    <name>petstore-karate</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- versiones estables publicadas -->
+        <karate.version>1.4.1</karate.version>
+        <cucumber.reporting.version>5.7.6</cucumber.reporting.version>
+        <surefire.version>3.2.5</surefire.version>
+        <junit.jupiter.version>5.9.3</junit.jupiter.version>
+    </properties>
+
+    <dependencies>
+        <!-- Karate + JUnit5 -->
+        <dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-junit5</artifactId>
+            <version>${karate.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Opcional para IDEs (NO usar launcher) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.6</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Ejecutar Karate con JUnit5 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <includes>
+                        <!-- ejecuta ambos estilos: *Runner y *Test -->
+                        <include>**/*Runner.java</include>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <!-- si quieres filtrar tags, sobreescribe con -Dkarate.options="-tags @quick" -->
+                    <systemPropertyVariables>
+                        <karate.options>--tags ~@ignore</karate.options>
+                    </systemPropertyVariables>
+                </configuration>
+
+            </plugin>
+
+            <!-- Reporte Cucumber (Karate JSON -> HTML)
+
+             -->
+
+
+        </plugins>
+    </build>
+</project>

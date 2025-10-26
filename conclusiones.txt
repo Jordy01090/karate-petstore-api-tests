@@ -1,0 +1,15 @@
+CONCLUSIONES DEL PROYECTO PETSTORE - KARATE
+
+1. Se automatizó con éxito el flujo CRUD de la API PetStore con Karate y JUnit5, validando el correcto funcionamiento de los endpoints POST, GET y PUT.
+
+2. Karate permitió expresar las pruebas de forma legible en Gherkin, integrando lógica de negocio y validaciones en un solo archivo.
+
+3. Se creó una clase de gestión (ManagementTest.java) que ejecuta los test y genera automáticamente un reporte HTML con Masterthought, sin usar plugin Maven.
+
+4. Se aplicaron reintentos para manejar la latencia y consistencia eventual de la API pública de Swagger PetStore.
+
+5. El proyecto cumple criterios de QA Senior: modularidad, generación de evidencias, ejecución CI/CD y validaciones completas.
+
+6. Futuras mejoras: incluir pruebas negativas, validación de esquemas y métricas de rendimiento.
+
+Conclusión: este proyecto demuestra un enfoque profesional de automatización de APIs REST con Karate, aplicando buenas prácticas y reportes visuales claros.
