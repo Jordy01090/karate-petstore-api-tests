@@ -25,7 +25,7 @@ petstore-karate/
 
 ## ⚙️ Requisitos
 - Java JDK 17+
-- Apache Maven 3.8+
+- Apache Maven 3.9.11
 - Conexión a Internet
 
 Verifica:
@@ -71,5 +71,5 @@ target/karate-reports/features.petstore.html
 | `too many retry attempts` | API lenta | Aumenta tiempo en el step `retry until` |
 
 **Autor:** Jordy Ávila  
-**Tecnologías:** Karate 1.4.1 · JUnit 5 · Java 17 · Maven 3.8+  
+**Tecnologías:** Karate 1.4.1 · JUnit 5 · Java 17 · Maven 3.9.11  
 **Fecha:** Octubre 2025
